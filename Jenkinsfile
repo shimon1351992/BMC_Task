@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                echo $ipadress $path
+                echo "$ipadress $path"
                 bat 'java Client $ipadress $path'
             }
         }
