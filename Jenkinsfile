@@ -17,7 +17,7 @@ pipeline {
                         parameters: [string(defaultValue: ' ', name: 'path', trim: true)]
                         )
                 }
-               '
+               
             }
         }
         stage('Build') {
