@@ -6,7 +6,7 @@ public class Client  extends Thread{
 
 
     public static void main(String[] args) throws IOException {
-        Socket s = new Socket(args[1],6666);
+        Socket s = new Socket(args[0] 666);
         DataOutputStream dout = new DataOutputStream(s.getOutputStream());
         dout.writeUTF(args[2]);
         dout.flush();
