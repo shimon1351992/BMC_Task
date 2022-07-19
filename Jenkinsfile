@@ -9,13 +9,12 @@ pipeline {
                     ipadress = input(
                         message: 'what is the ipadress?',
                         ok:'submit',
-                        parameters: [string(defaultValue: ' ', name: 'ip_adress', trim: true)]
-                        )
-                     path = input(
-                        message: 'what is the ipadress?',
-                        ok:'submit',
-                        parameters: [string(defaultValue: ' ', name: 'path', trim: true)]
-                        )
+                        parameters: [
+                            string(defaultValue: ' ', name: 'ip_adress', trim: true),
+                            string(defualtValue: ' ', name: 'path', trim: true),
+                        ])
+                        
+                  
                 }
                
             }
@@ -28,7 +27,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo "$ipadress $path"
-                bat 'java Client $ipadress $path'
+                bat 'java Client $ipadress'
             }
         }
     }
