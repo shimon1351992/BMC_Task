@@ -1,12 +1,11 @@
-def ipadress = null
-def path = null
+
 pipeline {
     agent any
     
     parameters{
         string(name: 'HOSTNAME' , defaultValue: ' ', description: ' The hostname')
         string(name: 'PATH' , defaultValue: ' ' , description: 'The directory path')
-                                                          }
+    }
     stages {
         stage('Build') {
             steps {
