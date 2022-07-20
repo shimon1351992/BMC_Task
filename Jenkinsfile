@@ -4,8 +4,8 @@ pipeline {
          
     
      parameters{
-        string(name: 'HOSTNAME' , defaultValue: ' ', description: ' The hostname')
-        string(name: 'PATH1' , defaultValue: ' ' , description: 'The directory path')
+        string(name: 'HOSTNAME' , defaultValue: '192.168.56.1', description: ' The hostname')
+        string(name: 'PATH1' , defaultValue: 'C:\WINDOWS' , description: 'The directory path')
     }
     
     stages {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-              bat 'java Client "${HOSTNAME} ${PATH1}"'
+              bat 'java Client "${HOSTNAME}"'
             }
         }
     }
