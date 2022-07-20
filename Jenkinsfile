@@ -4,8 +4,8 @@ pipeline {
     agent any
     
     parameters{
-        string(name: 'HOST_NAME' , defaultValue: ' ', description: ' The host name')
-        string(name: 'PATH' , defaultValue: ' ' , description: 'The path')
+        string(name: 'HOSTNAME' , defaultValue: ' ', description: ' The hostname')
+        string(name: 'PATH' , defaultValue: ' ' , description: 'The directory path')
                                                           }
     stages {
         stage('Build') {
@@ -15,8 +15,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                echo "$ipadress $path"
-                bat 'java Client "${HOSTֹֹֹ_NAME}" "${PATH}"'
+                bat 'java Client "${HOSTֹֹֹNAME}" "${PATH}"'
             }
         }
     }
