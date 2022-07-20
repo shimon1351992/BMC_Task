@@ -2,28 +2,12 @@ def ipadress = null
 def path = null
 pipeline {
     agent any
+    
+    parameters{
+        string(name: 'HOST_NAME' , defaultValye: ' ', description: ' The host name'),
+        sstring(name: 'PATH' , defaultValue: ' ' , description: 'The path'),
+                                                          }
     stages {
-           stage('input') {
-            steps {
-                script{
-                    ipadress = input(
-                        message: 'what is the ipadress?',
-                        ok:'submit',
-                        parameters: [
-                            string(defaultValue: ' ', name: 'ip_adress', trim: true),
-                        ])
-                     path = input(
-                        message: 'what is the path?',
-                        ok:'submit',
-                        parameters: [
-                            string(defualtValue: ' ', name: 'path', trim: true),
-                        ])
-                        
-                  
-                }
-               
-            }
-        }
         stage('Build') {
             steps {
                 bat 'javac client.java'
@@ -32,7 +16,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo "$ipadress $path"
-                bat 'java Client "${ipadress}" "${path}"'
+                bat 'java Client "${HOSTֹֹֹ_NAME}" "${PATH}"'
             }
         }
     }
