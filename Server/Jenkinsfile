@@ -5,12 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'javac test.java'
+                bat 'javac server.java'
             }
         }
         stage('Run') {
             steps {
-               bat 'java Test'
+               bat 'java Server'
         }
     }
   } 
