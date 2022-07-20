@@ -1,7 +1,7 @@
 
 pipeline {
     agent {
-       lable 'win_agent'   
+       label 'win_agent'   
     }
          
     
