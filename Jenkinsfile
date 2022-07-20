@@ -5,7 +5,7 @@ pipeline {
     
     parameters{
         string(name: 'HOST_NAME' , defaultValye: ' ', description: ' The host name'),
-        sstring(name: 'PATH' , defaultValue: ' ' , description: 'The path'),
+        sstring(name: 'PATH' , defaultValue: ' ' , description: 'The path')
                                                           }
     stages {
         stage('Build') {
