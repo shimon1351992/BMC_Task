@@ -4,7 +4,7 @@ pipeline {
     
     parameters{
         string(name: 'HOSTNAME' , defaultValue: ' ', description: ' The hostname')
-        string(name: 'PATH' , defaultValue: ' ' , description: 'The directory path')
+        string(name: 'PATH1' , defaultValue: ' ' , description: 'The directory path')
     }
     stages {
         stage('Build') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                bat 'java Client "${HOSTֹֹֹNAME}" "${PATH}"'
+                bat 'java Client'
             }
         }
     }
