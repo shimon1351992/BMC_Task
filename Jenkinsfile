@@ -4,8 +4,8 @@ pipeline {
     agent any
     
     parameters{
-        string(name: 'HOST_NAME' , defaultValye: ' ', description: ' The host name')
-        sstring(name: 'PATH' , defaultValue: ' ' , description: 'The path')
+        string(name: 'HOST_NAME' , defaultValue: ' ', description: ' The host name')
+        string(name: 'PATH' , defaultValue: ' ' , description: 'The path')
                                                           }
     stages {
         stage('Build') {
