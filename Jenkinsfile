@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-              bat 'java Client "${HOSTNAME}"'
+              bat 'java Client ${HOSTNAME}'
             }
         }
     }
