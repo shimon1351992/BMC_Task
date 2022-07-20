@@ -10,7 +10,11 @@ pipeline {
         }
         stage('Run') {
             steps {
-               bat 'java Server'
+               bat """
+               cd Server
+               dir
+               java Server
+               """
         }
     }
   } 
