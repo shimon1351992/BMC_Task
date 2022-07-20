@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'javac server.java'
+                bat 'javac Server.java'
             }
         }
         stage('Run') {
