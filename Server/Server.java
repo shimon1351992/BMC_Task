@@ -2,14 +2,9 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.LinkedList;
 
 public class Server {
-
-
-
     public static void main(String args[]) throws IOException {
-
         InetAddress add = InetAddress.getLocalHost();
         System.out.print(add);
         ServerSocket ss = new ServerSocket(6666);
@@ -32,11 +27,6 @@ public class Server {
         // send back the message to the client
         ObjectOutputStream out = new ObjectOutputStream(s.getOutputStream());
         out.writeObject(message);
-
-
         ss.close();
     }
-
-    }
-
-
+}
