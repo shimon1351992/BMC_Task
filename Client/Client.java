@@ -1,14 +1,10 @@
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.net.InetAddress;
 import java.net.Socket;
 
 public class Client {
-
-
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-
         //args[0] hold the ip from jenkinsfile and create socket
         Socket s = new Socket("192.168.56.1",6666);
 
