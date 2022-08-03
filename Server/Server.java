@@ -7,7 +7,7 @@ public class Server {
     public static void main(String args[]) throws IOException {
         InetAddress add = InetAddress.getLocalHost();
         System.out.print(add);
-        ServerSocket ss = new ServerSocket(6666);
+        ServerSocket ss = new ServerSocket(5555);
         Socket s = ss.accept(); //conection is accepted
 
         DataInputStream dis = new DataInputStream(s.getInputStream()); //get the data
