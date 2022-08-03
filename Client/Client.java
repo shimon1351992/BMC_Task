@@ -6,7 +6,7 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         //args[0] hold the ip from jenkinsfile and create socket
-        Socket s = new Socket(args[0],6666);
+        Socket s = new Socket(args[0],5555);
 
         // args[1] hold the path for directory from jenkinsfile and  send to server
         DataOutputStream dout = new DataOutputStream(s.getOutputStream());
